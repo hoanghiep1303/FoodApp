@@ -1,0 +1,83 @@
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:300); */
+
+.login-page {
+  padding: 8% 0 0;
+  margin: auto;
+}
+.login-form {
+  top: -10px;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.login-form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.login-form .login-button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #57b846;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.login-form .login-button:hover,.login-form .login-button:active,.login-form .login-button:focus {
+  background: rgb(5, 149, 5);
+}
+.login-form .message {
+  margin: 15px 0 0;
+  font-size: 12px;
+}
+.login-form .message a {
+  font-weight: bold;
+  color: rgb(5, 149, 5);
+  text-decoration: none;
+}
+.ls-page {
+  padding-bottom: 560px;
+  height: 100vh;
+  background: #76b852; /* fallback for old browsers */
+  background: rgb(141,194,111);
+  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+.google-login-button {
+  background: #dd4b39;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.google-login-button:hover {
+  background: #f51f03;
+}
