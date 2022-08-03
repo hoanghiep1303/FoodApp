@@ -17,7 +17,7 @@ const Header = () => {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark">
+        <nav className="sticky-top navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <Link to="/" className="navbar-brand">FoodApp</Link>
                 <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
