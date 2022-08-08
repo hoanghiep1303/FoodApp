@@ -3,8 +3,8 @@ const fs = require('fs');
 var paypal = require('paypal-rest-sdk');
 
 exports.checkout = async (req,res) =>{
-	const CILENT_ID_PP = 'AXyT6UqL_3Qgy3UamDrOBwJRj-DNuATs5zK0qwixZ-3AFgS-vrgHernqtpRe7yXhJqCEomWULKdSHeaN'
-	const CILENT_SECRET_PP = 'EOoJIOTVFLgdF5-oiz79IMLM6kAqdtoTjnIW5rDMlI6W6rZBaLasMmjP3pDtVI9lv_ldDVh2jX3zTXu0'
+	const CILENT_ID_PP = "Ab9ADnUFlhhvW_yM_7RakcfMJ3LoVD9k7BAP4DM2EpaYG8OYVzSrM92z59FZ4VlSkSzzDF-2H9k4KEuV"
+	const CILENT_SECRET_PP = "EEIpWJBixDOxpOqEreH5csgxM8SOunzVCq40fM_yAkdAW8M5wHDg4u1fZT1iVQdPkL_VbhTB3Vkukdrn"
 	paypal.configure({
 		'mode': 'sandbox',
 		'client_id': CILENT_ID_PP,
@@ -19,8 +19,8 @@ exports.checkout = async (req,res) =>{
 			"payment_method": "paypal"
 		},
 		"redirect_urls": {
-			"return_url": "http://localhost:3000/checkout-success",
-			"cancel_url": "http://localhost:3000/checkout-error"
+			"return_url": "http://localhost:3000/api/product/checkout-success",
+			"cancel_url": "http://localhost:3000/api/product/checkout-error"
 		},
 		"transactions": [{
 			"item_list": {
@@ -55,7 +55,10 @@ exports.checkout = async (req,res) =>{
 }
 
 exports.checkoutSuccess = async (req, res) => {
-
+	res.status({msg: "Success!"})
+}
+exports.checkoutFail = async (req, res) => {
+	res.status({msg: "Failed!"})
 }
 
 exports.create = async (req, res) => {

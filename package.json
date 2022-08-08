@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.9.3",
     "bcryptjs": "^2.4.3",
     "concurrently": "^7.3.0",
     "cookie-parser": "^1.4.6",
