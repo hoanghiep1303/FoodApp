@@ -4,6 +4,10 @@ const { authenticatateJWT } = require('../middleware/authenticator');
 const upload = require('../middleware/multer');
 const productController = require('../controllers/product');
 
+router.post('/checkout', productController.checkout);
+router.post('/checkout-success', productController.checkoutSuccess);
+// router.post('/checkout-fail', productController.checkoutFail);
+
 router.post('/', authenticatateJWT, upload.single('productImage'), productController.create);
 router.get('/', productController.readAll);
 router.get('/count', productController.readByCount);
