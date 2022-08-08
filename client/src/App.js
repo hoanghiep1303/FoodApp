@@ -15,8 +15,8 @@ import AdminEditProduct from './components/AdminEditProduct';
 import Order from './components/Order';
 import Product from './components/Product';
 import Cart from './components/Cart';
-import Payment from './components/Payment';
-import Shipping from './components/Shipping';
+import AdminSidebar from './components/AdminSidebar';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -27,8 +27,6 @@ function App() {
         <Route exact path='/signin' element={<Login />} />
         <Route exact path='/signup' element={<Signup />} />
         <Route exact path='/order' element={<Order />} />
-        <Route exact path='/shipping' element={<Shipping />} />
-        <Route exact path='/payment' element={<Payment />} />
         <Route exact path='/product/:productId' element={<Product />} />
         <Route exact path='/cart' element={<Cart />} />
         <Route element={<UserRoute />}>
@@ -39,6 +37,8 @@ function App() {
           <Route exact path='/admin/edit/product/:productId' element={<AdminEditProduct />} />
         </Route>
         <Route path="*" element={<NotFound />} />
+        <Route path="/adminsidebar" element={<AdminSidebar />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </Router>
